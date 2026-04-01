@@ -1,35 +1,36 @@
-#  Flutter Download Manager
-
+# Flutter Download Manager
 
 A powerful, resumable, and queue-based download manager for Flutter — built for production apps.
 
 ---
 
-##  Highlights
+## Highlights
 
-*  Parallel downloads with queue system
-*  Resume & pause downloads
-*  Smart retry mechanism
-*  Real-time progress & speed tracking
-*  Save directly to Downloads (Android MediaStore)
-*  iOS support (Documents directory)
-*  Built-in notifications
-*  Batch downloads
-*  Persistent tasks (auto restore)
-*  Open file automatically after download
-
----
-##  Preview
-
-
-![Screenshot_1775037209.png](screenshots/Screenshot_1775037209.png)
-![Screenshot_1775037214.png](screenshots/Screenshot_1775037214.png)
-![Screenshot_1775037220.png](screenshots/Screenshot_1775037220.png)
-![Screenshot_1775037231.png](screenshots/Screenshot_1775037231.png)
-
+* Parallel downloads with queue system
+* Resume & pause downloads
+* Smart retry mechanism
+* Real-time progress & speed tracking
+* Save directly to Downloads (Android MediaStore)
+* iOS support (Documents directory)
+* Built-in notifications
+* Batch downloads
+* Persistent tasks (auto restore)
+* Open file automatically after download
 
 ---
-##  Installation
+
+## Preview
+
+<p align="center">
+  <img src="screenshots/Screenshot_1775037209.png" width="200" alt="Screenshot_1"/>
+  <img src="screenshots/Screenshot_1775037214.png" width="200" alt="Screenshot_2"/>
+  <img src="screenshots/Screenshot_1775037220.png" width="200" alt="Screenshot_3"/>
+  <img src="screenshots/Screenshot_1775037231.png" width="200" alt="Screenshot_4"/>
+</p>
+
+---
+
+## Installation
 
 ```yaml
 dependencies:
@@ -38,13 +39,16 @@ dependencies:
 
 ---
 
-##  Quick Start
+## Quick Start
 
 ### Initialize
 
 ```dart
-await DownloadNotificationService.init();
-await DownloadNotificationService.requestPermission();
+await
+DownloadNotificationService.init
+();await
+DownloadNotificationService.requestPermission
+();
 ```
 
 ---
@@ -52,6 +56,7 @@ await DownloadNotificationService.requestPermission();
 ### Create Controller
 
 ```dart
+
 final controller = DownloadController(
   maxConcurrent: 2,
 );
@@ -62,82 +67,110 @@ final controller = DownloadController(
 ### Download a File
 
 ```dart
+
 final task = controller.addTask(
   'https://example.com/file.pdf',
   subFolder: 'MyApp',
   openAfterDownload: true,
 );
 
-await controller.startTask(task);
-```
-
----
-
-##  Usage Examples
-
-###  Download PDF
-
-```dart
-controller.addTask(
-  'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
-  openAfterDownload: true,
+await
+controller.startTask
+(
+task
 );
 ```
 
 ---
 
-###  Download Image
+## Usage Examples
+
+### Download PDF
 
 ```dart
-controller.addTask(
-  'https://www.w3.org/Icons/w3c_home.png',
+controller.addTask
+('https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
+'
+,openAfterDownload:
+true
+,
 );
 ```
 
 ---
 
-###  Batch Download
+### Download Image
 
 ```dart
-controller.addBatch([
-  'https://example.com/file1.pdf',
-  'https://example.com/file2.png',
+controller.addTask
+('https://www.w3.org/Icons/w3c_home.png
+'
+,
+);
+```
+
+---
+
+### Batch Download
+
+```dart
+controller.addBatch
+([
+'https://example.com/file1.pdf',
+'https://example.com/file2.png',
 ]);
 ```
 
 ---
 
-###  Pause / Resume
+### Pause / Resume
 
 ```dart
-controller.pauseTask(task);
-controller.resumeTask(task);
-```
-
----
-
-###  Cancel
-
-```dart
-await controller.cancelTask(task);
-```
-
----
-
-##  Open File After Download
-
-Automatically open files when completed:
-
-```dart
-controller.addTask(
-  url,
-  openAfterDownload: true,
+controller.pauseTask
+(
+task
+);
+controller
+.
+resumeTask
+(
+task
 );
 ```
 
 ---
 
-##  File Storage
+### Cancel
+
+```dart
+await
+controller.cancelTask
+(
+task
+);
+```
+
+---
+
+## Open File After Download
+
+Automatically open files when completed:
+
+```dart
+controller.addTask
+(
+url
+,
+openAfterDownload
+:
+true
+,
+);
+```
+
+---
+
+## File Storage
 
 ### Android
 
@@ -151,20 +184,22 @@ controller.addTask(
 
 ---
 
-##  Listen to Progress
+## Listen to Progress
 
 ```dart
-controller.onTaskUpdated.listen((task) {
-  print(task.progress);
+controller.onTaskUpdated.listen
+(
+(task) {
+print(task.progress);
 });
 ```
 
 ---
 
-##  Configuration
+## Configuration
 
 | Option            | Description                  |
-| ----------------- | ---------------------------- |
+|-------------------|------------------------------|
 | maxConcurrent     | Number of parallel downloads |
 | priority          | Download priority            |
 | headers           | Custom request headers       |
@@ -175,7 +210,7 @@ controller.onTaskUpdated.listen((task) {
 
 ---
 
-##  How It Works
+## How It Works
 
 * Uses **Dio** for downloading
 * Supports **HTTP Range requests** (resume)
