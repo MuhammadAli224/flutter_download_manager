@@ -1,6 +1,6 @@
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
-import 'flutter_download_manager_method_channel.dart';
+import 'smart_download_manager_plus_method_channel.dart';
 
 abstract class FlutterDownloadManagerPlatform extends PlatformInterface {
   /// Constructs a FlutterDownloadManagerPlatform.

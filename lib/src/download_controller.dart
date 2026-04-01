@@ -9,7 +9,7 @@ import 'package:open_filex/open_filex.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../flutter_download_manager.dart';
+import '../smart_download_manager_plus.dart';
 
 class DownloadController {
   final int maxConcurrent;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_download_manager_plus/flutter_download_manager.dart';
+import 'package:smart_download_manager_plus/smart_download_manager_plus.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

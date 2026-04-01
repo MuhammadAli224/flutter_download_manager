@@ -1,3 +1,10 @@
+## 1.0.2
+
+- Fixed library naming to match package name
+- Improved package structure and public API
+- Cleaned up internal exports
+
+
 ## 1.0.1
 
 - Removed unnecessary library declaration
