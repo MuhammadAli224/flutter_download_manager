@@ -4,6 +4,8 @@ version: 1.0.4
 homepage: https://github.com/MuhammadAli224/smart_download_manager_plus
 repository: https://github.com/MuhammadAli224/smart_download_manager_plus
 issue_tracker: https://github.com/MuhammadAli224/smart_download_manager_plus/issues
+license: MIT
+
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -31,6 +33,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+
 
 flutter:
   plugin:
