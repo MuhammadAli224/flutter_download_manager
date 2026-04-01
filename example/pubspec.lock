@@ -118,13 +118,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_download_manager:
-    dependency: "direct main"
-    description:
-      path: ".."
-      relative: true
-    source: path
-    version: "1.0.0"
   flutter_driver:
     dependency: transitive
     description: flutter
@@ -435,6 +428,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  smart_download_manager_plus:
+    dependency: "direct main"
+    description:
+      path: ".."
+      relative: true
+    source: path
+    version: "1.0.0"
   source_span:
     dependency: transitive
     description:

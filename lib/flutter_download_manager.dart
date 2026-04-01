@@ -1,4 +1,4 @@
-library flutter_download_manager;
+library smart_download_manager_plus;
 
 export 'src/download_controller.dart';
 export 'src/download_task.dart';

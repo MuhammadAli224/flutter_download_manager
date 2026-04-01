@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_download_manager/flutter_download_manager.dart';
-import 'package:open_filex/open_filex.dart';
+import 'package:smart_download_manager_plus/flutter_download_manager.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -244,9 +243,7 @@ class _DownloadScreenState extends State<DownloadScreen> {
         return IconButton(
           icon: const Icon(Icons.open_in_new),
           onPressed: () {
-            if (t.savedPath != null) {
-              OpenFilex.open(t.savedPath!);
-            }
+
           },
         );
 
