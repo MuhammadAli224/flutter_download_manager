@@ -1,6 +1,7 @@
 ## 1.0.0
 
 - Initial release
-- Download manager with resume support
+- Resume download support
 - Notifications
 - Android MediaStore integration
+- Queue system
